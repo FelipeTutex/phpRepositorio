@@ -1,9 +1,10 @@
 <?php
   $today=date('l, d F Y');
   $usuario=gethostname();
+  $armamento=array("Batería Principal","Batería Secundaria","Batería antiaéreos","Batería antiaéreos","Misil de crucero","Misil antibuque","Defensa antimisiles antibuque");
   $menus=array("inicio"=>"Conoce al acorazado","armas"=>"Armamento","historia"=>"Historial","imagenes"=>"Galeria","otros"=>"Clase Iowa");
-  $barcosClaseIowa= (object)["Iowa"=>"USS Iowa (BB-61)","NewJersey"=>"USS New Jersey (BB-62)","Wisconsin"=>"USS Wisconsin (BB-64)","Illinois"=>"USS Illinois (BB-65)","Kentucky"=>"USS Kentucky (BB-66)"]
-  
+  $barcosClaseIowa= (object)["Iowa"=>"USS Iowa (BB-61)","NewJersey"=>"USS New Jersey (BB-62)","Wisconsin"=>"USS Wisconsin (BB-64)","Illinois"=>"USS Illinois (BB-65)","Kentucky"=>"USS Kentucky (BB-66)"];
+  $web=(object)["facebook"=>"https://www.facebook.com/Battleshipmissouri","twitter"=>"https://twitter.com/USSMissouri","youtube"=>"https://www.youtube.com/c/BattleshipMissouriMemorial63/featured","instagram"=>"https://www.instagram.com/battleshipmissouri/"];
 ?>  
 
 <!DOCTYPE html>
@@ -142,7 +143,7 @@
 
 <div class="section" id="Armamento">
   <div class="container">
-    <div class="h4 text-center mb-4 title">Armamento</div>
+    <div class="h4 text-center mb-4 title"><?php echo "$menus[armas]";?></div>
       <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <div class="card-body">
           <div class="row">
@@ -153,16 +154,16 @@
           </div>
           <div class="row">
             <div class="col">
-              <p><strong>Batería Principal</strong></p>
+              <p><strong><?php echo $armamento[0];?></strong></p>
             </div>
             <div class="col">
-              <p><strong>Batería Secundaria</strong></p>
+              <p><strong><?php echo $armamento[1];?></strong></p>
             </div>
             <div class="col">
-              <p><strong>Batería antiaéreos</strong></p>
+              <p><strong><?php echo $armamento[2];?></strong></p>
             </div>
             <div class="col">
-              <p><strong>Batería antiaéreos</strong></p>
+              <p><strong><?php echo $armamento[3];?></strong></p>
             </div>
           </div>
           <!--IMAGENES-->
@@ -205,19 +206,19 @@
           </div>
           <div class="row">
             <div class="col">
-              <p><strong>Batería principal</strong></p>
+              <p><strong><?php echo $armamento[0];?></strong></p>
             </div>
             <div class="col">
-              <p><strong>Batería secundaria</strong></p>
+              <p><strong><?php echo $armamento[1];?></strong></p>
             </div>
             <div class="col">
-              <p><strong>Misil de crucero</strong></p>
+              <p><strong><?php echo $armamento[4];?></strong></p>
             </div>
             <div class="col">
-              <p><strong>Misil antibuque</strong></p>
+              <p><strong><?php echo $armamento[5];?></strong></p>
             </div>
             <div class="col">
-              <p><strong>Defensa antimisiles antibuque</strong></p>
+              <p><strong><?php echo $armamento[6];?></strong></p>
             </div>
           </div>
           <!--IMAGENES-->
@@ -256,7 +257,7 @@
 
 <div class="section" id="Historial">
   <div class="container cc-experience">
-    <div class="h4 text-center mb-4 title">Historial</div>
+    <div class="h4 text-center mb-4 title"><?php echo "$menus[historia]";?></div>
     <div class="card">
       <div class="row">
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
@@ -346,7 +347,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 ml-auto mr-auto">
-        <div class="h4 text-center mb-4 title">Galería</div>
+        <div class="h4 text-center mb-4 title"><?php echo "$menus[imagenes]";?></div>
         <div class="nav-align-center">
           <ul class="nav nav-pills nav-pills-primary" role="tablist">
             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#WW2" role="tablist"><i class="fa fa-ship" aria-hidden="true"></i></a></li>
@@ -517,10 +518,10 @@
   </div>
 </div>
 
-
+<!--OTROS BARCOS-------------------------------------------------------------------------------------------------------------------->
 <div class="section" id="ClaseIowa">
   <div class="container cc-reference">
-    <div class="h4 mb-4 text-center title">Clase Iowa</div>
+    <div class="h4 mb-4 text-center title"><?php echo "$menus[otros]";?></div>
     <div class="card" data-aos="zoom-in">
       <div class="carousel slide" id="cc-Indicators" data-ride="carousel">
         <ol class="carousel-indicators" >
@@ -638,10 +639,10 @@
     </div>
     <footer class="footer">
       <div class="container text-center">
-        <a class="cc-facebook btn btn-link" href="https://www.facebook.com/Battleshipmissouri"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a>
-        <a class="cc-twitter btn btn-link " href="https://twitter.com/USSMissouri"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a>
-        <a class="cc-youtube btn btn-link" href="https://www.youtube.com/c/BattleshipMissouriMemorial63/featured"><i class="fa fa-youtube-square" aria-hidden="true"></i></i></a>
-        <a class="cc-instagram btn btn-link" href="https://www.instagram.com/battleshipmissouri/"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
+        <a class="cc-facebook btn btn-link" href="<?php echo $web->facebook;?>"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a>
+        <a class="cc-twitter btn btn-link " href="<?php echo $web->twitter;?>"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a>
+        <a class="cc-youtube btn btn-link" href="<?php echo $web->youtube;?>"><i class="fa fa-youtube-square" aria-hidden="true"></i></i></a>
+        <a class="cc-instagram btn btn-link" href="<?php echo $web->instagram;?>"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
       <div class="h4 title text-center">Buque Museo USS Missouri</div>
       
     </footer>
