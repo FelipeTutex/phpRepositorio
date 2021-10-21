@@ -1,10 +1,25 @@
 <?php
-  $today=date('l, d F Y');
-  $usuario=gethostname();
-  $armamento=array("Batería Principal","Batería Secundaria","Batería antiaéreos","Batería antiaéreos","Misil de crucero","Misil antibuque","Defensa antimisiles antibuque");
-  $menus=array("inicio"=>"Conoce al acorazado","armas"=>"Armamento","historia"=>"Historial","imagenes"=>"Galeria","otros"=>"Clase Iowa");
-  $barcosClaseIowa= (object)["Iowa"=>"USS Iowa (BB-61)","NewJersey"=>"USS New Jersey (BB-62)","Wisconsin"=>"USS Wisconsin (BB-64)","Illinois"=>"USS Illinois (BB-65)","Kentucky"=>"USS Kentucky (BB-66)"];
-  $web=(object)["facebook"=>"https://www.facebook.com/Battleshipmissouri","twitter"=>"https://twitter.com/USSMissouri","youtube"=>"https://www.youtube.com/c/BattleshipMissouriMemorial63/featured","instagram"=>"https://www.instagram.com/battleshipmissouri/"];
+  /*01*/$today=date('l, d F Y');
+  /*02*/$usuario=gethostname();
+  /*03*/$armamento=array("Batería Principal","Batería Secundaria","Batería antiaéreos","Batería antiaéreos","Misil de crucero","Misil antibuque","Defensa antimisiles antibuque");
+  /*04*/$menus=array("inicio"=>"Conoce al acorazado","armas"=>"Armamento","historia"=>"Historial","imagenes"=>"Galeria","otros"=>"Clase Iowa");
+  /*05*/$barcosClaseIowa= (object)["Iowa"=>"USS Iowa (BB-61)","NewJersey"=>"USS New Jersey (BB-62)","Wisconsin"=>"USS Wisconsin (BB-64)","Illinois"=>"USS Illinois (BB-65)","Kentucky"=>"USS Kentucky (BB-66)"];
+  /*06*/$facebook="https://www.facebook.com/Battleshipmissouri";
+  /*07*/$twitter="https://twitter.com/USSMissouri";
+  /*08*/$youtube="https://www.youtube.com/c/BattleshipMissouriMemorial63/featured";
+  /*09*/$instagram="https://www.instagram.com/battleshipmissouri/";
+  /*10*/$astrillero="New York Naval Shipyard";
+  /*11*/$claseBarco="Iowa";
+  /*12*/$tipoBarco="Acorazado";
+  /*13*/$fechaAutorizado="12 de junio de 1940";
+  /*14*/$fechaIniciado="6 de enero de 1941";
+  /*15*/$fechaBotado="29 de enero de 1944";
+  /*16*/$fechaAsignado="11 de junio de 1944";
+  /*17*/$fechaBaja="31 de marzo de 1992";
+  /*18*/$destino="Buque museo desde el 12 de enero de 1995";
+  /*19*/$imagenesWW2=array("images/WW2/plano.jpg","images/WW2/navegando.JPG","images/WW2/rendicion.jpg","images/WW2/botadura.jpg","images/WW2/kamikaze.jpg");
+  /*20*/$imagenesGuerraFria=array("images/OtrasGuerras/canalPanama.jpg","images/OtrasGuerras/reactivacion.jpg","images/OtrasGuerras/misilIrak.jpg","images/OtrasGuerras/Korea.jpg","images/OtrasGuerras/retiradaServicio.jpg","images/OtrasGuerras/flota.jpg");
+  /*21*/$imagenesMuseo=array("images/Museo/lateralMuseo.jpg","images/Museo/bateriaPrincipal.JPG","images/Museo/museo.jpg","images/Museo/educacion.jpg");
 ?>  
 
 <!DOCTYPE html>
@@ -100,39 +115,39 @@
             <div class="h4 mt-0 title">Datos</div>
             <div class="row">
               <div class="col-sm-4"><strong class="text-uppercase">Astillero:</strong></div>
-              <div class="col-sm-8">New York Naval Shipyard</div>
+              <div class="col-sm-8"><?php echo $astrillero;?></div>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Clase:</strong></div>
-              <div class="col-sm-8">Iowa</div>
+              <div class="col-sm-8"><?php echo $claseBarco;?></div>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Tipo:</strong></div>
-              <div class="col-sm-8">Acorazado</div>
+              <div class="col-sm-8"><?php echo $tipoBarco;?></div>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Autorizado:</strong></div>
-              <div class="col-sm-8">12 de junio de 1940</div>
+              <div class="col-sm-8"><?php echo $fechaAutorizado;?></div>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Iniciado:</strong></div>
-              <div class="col-sm-8">6 de enero de 1941</div>
+              <div class="col-sm-8"><?php echo $fechaIniciado;?></div>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Botado:</strong></div>
-              <div class="col-sm-8">29 de enero de 1944</div>
+              <div class="col-sm-8"><?php echo $fechaBotado;?></div>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Asignado:</strong></div>
-              <div class="col-sm-8">11 de junio de 1944</div>
+              <div class="col-sm-8"><?php echo $fechaAsignado;?></div>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Baja:</strong></div>
-              <div class="col-sm-8">31 de marzo de 1992</div>
+              <div class="col-sm-8"><?php echo $fechaBaja;?></div>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Destino:</strong></div>
-              <div class="col-sm-8">Buque museo desde el 12 de enero de 1995</div>
+              <div class="col-sm-8"><?php echo $destino;?></div>
             </div>
           </div>
         </div>
@@ -367,7 +382,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                <figure class="cc-effect"><img src="images/WW2/plano.jpg" alt="Image"/>
+                <figure class="cc-effect"><img src="<?php echo $imagenesWW2[0];?>" alt="Image"/>
                   <figcaption>
                     <div class="h4">Planos</div>
                     <p>plano del Missouri</p>
@@ -375,7 +390,7 @@
                 </figure></a>
               </div>
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                  <figure class="cc-effect"><img src="images/WW2/navegando.JPG" alt="Image"/>
+                  <figure class="cc-effect"><img src="<?php echo $imagenesWW2[1];?>" alt="Image"/>
                     <figcaption>
                       <div class="h4">En alta mar</div>
                       <p>En esta fotografía podemos ver dos de estos buques, el Iowa a la derecha y el Missouri a la izquierda.</p>
@@ -383,7 +398,7 @@
                   </figure></a>
               </div>
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                <figure class="cc-effect"><img src="images/WW2/rendicion.jpg" alt="Image"/>
+                <figure class="cc-effect"><img src="<?php echo $imagenesWW2[2];?>" alt="Image"/>
                   <figcaption>
                     <div class="h4">Fin de la Guerra</div>
                     <p>El ministro de exteriores japonés Mamoru Shigemitsu firma el Acta de Rendición de Japón a bordo del USS Missouri el 2 de septiembre de 1945.</p>
@@ -394,14 +409,14 @@
 
             <div class="col-md-6">
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                  <figure class="cc-effect"><img src="images/WW2/botadura.jpg" alt="Image"/>
+                  <figure class="cc-effect"><img src="<?php echo $imagenesWW2[3];?>" alt="Image"/>
                     <figcaption>
                       <div class="h4">La salida</div>
                       <p>Margaret Truman en la botadura del Missouri</p>
                     </figcaption>
                   </figure></a></div>
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                  <figure class="cc-effect"><img src="images/WW2/kamikaze.jpg" alt="Image"/>
+                  <figure class="cc-effect"><img src="<?php echo $imagenesWW2[4];?>" alt="Image"/>
                     <figcaption>
                       <div class="h4">Bajo ataque</div>
                       <p>Un kamikaze japonés (Zero) a punto de impactar al Missouri.</p>
@@ -421,14 +436,14 @@
           <div class="row">
             <div class="col-md-6">
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/OtrasGuerras/canalPanama.jpg" alt="Image"/>
+                  <figure class="cc-effect"><img src="<?php echo $imagenesGuerraFria[0];?>" alt="Image"/>
                     <figcaption>
                       <div class="h4">Rumbo al Mediterráneo</div>
                       <p>El Missouri cruzando el canal de Panamá, en ruta a los Estados Unidos, en octubre de 1945.</p>
                     </figcaption>
                   </figure></a></div>
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/OtrasGuerras/reactivacion.jpg" alt="Image"/>
+                  <figure class="cc-effect"><img src="<?php echo $imagenesGuerraFria[1];?>" alt="Image"/>
                     <figcaption>
                       <div class="h4">Reactivacion</div>
                       <p>Nuevos acontecimientos obligaron al Missouri y a sus compañeros de clase a volver al servicio activo durante la guerra fría, en los años 80</p>
@@ -436,7 +451,7 @@
                   </figure></a>
               </div>
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                <figure class="cc-effect"><img src="images/OtrasGuerras/misilIrak.jpg" alt="Image"/>
+                <figure class="cc-effect"><img src="<?php echo $imagenesGuerraFria[2];?>" alt="Image"/>
                   <figcaption>
                     <div class="h4">Al ataque</div>
                     <p>Missouri lanzando un misil Tomahawk contra Irak.</p>
@@ -446,21 +461,21 @@
             </div>
             <div class="col-md-6">
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/OtrasGuerras/Korea.jpg" alt="Image"/>
+                  <figure class="cc-effect"><img src="<?php echo $imagenesGuerraFria[3];?>" alt="Image"/>
                     <figcaption>
                       <div class="h4">Abriendo fuego</div>
                       <p>Missouri disparando sus cañones contra las tropas de Corea del Norte.</p>
                     </figcaption>
                   </figure></a></div>
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/OtrasGuerras/retiradaServicio.jpg" alt="Image"/>
+                  <figure class="cc-effect"><img src="<?php echo $imagenesGuerraFria[4];?>" alt="Image"/>
                     <figcaption>
                       <div class="h4">El retiro</div>
                       <p>Tras la Guerra de Corea el Missouri y sus gemelos fueron retirados del servicio activo y pasaron a la reserva</p>
                     </figcaption>
                   </figure></a></div>
                   <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                    <figure class="cc-effect"><img src="images/OtrasGuerras/flota.jpg" alt="Image"/>
+                    <figure class="cc-effect"><img src="<?php echo $imagenesGuerraFria[5];?>" alt="Image"/>
                       <figcaption>
                         <div class="h4">Volviendo a los mares</div>
                         <p>vista aérea de una fuerza táctica de la flota de los Estados Unidos, el U.S.S. Missouri en cabeza, a su popa el portaaviones U.S.S. Ranger y a su alrededor una docena de buques de escolta: cruceros, destructores y fragatas.</p>
@@ -481,14 +496,14 @@
           
             <div class="col-md-6">
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
-                  <figure class="cc-effect"><img src="images/Museo/lateralMuseo.jpg" alt="Image"/>
+                  <figure class="cc-effect"><img src="<?php echo $imagenesMuseo[0];?>" alt="Image"/>
                     <figcaption>
                       <div class="h4">Buque Museo</div>
                       <p>Fotografía del Missouri en la actualidad, en Pearl Harbor, donde recibe miles de visitantes ansiosos de recorrer ese magnífico buque.</p>
                     </figcaption>
                   </figure></a></div>
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
-                  <figure class="cc-effect"><img src="images/Museo/bateriaPrincipal.JPG" alt="Image"/>
+                  <figure class="cc-effect"><img src="<?php echo $imagenesMuseo[1];?>" alt="Image"/>
                     <figcaption>
                       <div class="h4">Los cañones</div>
                       <p>Torretas de artillería, se puede apreciar claramente el impresionante tamaño de esos cañones.</p>
@@ -497,14 +512,14 @@
             </div>
             <div class="col-md-6">
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
-                  <figure class="cc-effect"><img src="images/Museo/museo.jpg" alt="Image"/>
+                  <figure class="cc-effect"><img src="<?php echo $imagenesMuseo[2];?>" alt="Image"/>
                     <figcaption>
                       <div class="h4">Altos Honores</div>
                       <p>Marineros del USS Abraham Lincoln rindiendo honores al Arizona y al Missouri en Pearl Harbor, Hawái.</p>
                     </figcaption>
                   </figure></a></div>
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
-                  <figure class="cc-effect"><img src="images/Museo/educacion.jpg" alt="Image"/>
+                  <figure class="cc-effect"><img src="<?php echo $imagenesMuseo[3];?>" alt="Image"/>
                     <figcaption>
                       <div class="h4">Donde la historia cobra vida</div>
                       <p>Maestros y estudiantes aprenden sobre los 70 años de historia del acorazado</p>
@@ -639,10 +654,10 @@
     </div>
     <footer class="footer">
       <div class="container text-center">
-        <a class="cc-facebook btn btn-link" href="<?php echo $web->facebook;?>"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a>
-        <a class="cc-twitter btn btn-link " href="<?php echo $web->twitter;?>"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a>
-        <a class="cc-youtube btn btn-link" href="<?php echo $web->youtube;?>"><i class="fa fa-youtube-square" aria-hidden="true"></i></i></a>
-        <a class="cc-instagram btn btn-link" href="<?php echo $web->instagram;?>"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
+        <a class="cc-facebook btn btn-link" href="<?php echo $facebook;?>"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a>
+        <a class="cc-twitter btn btn-link " href="<?php echo $twitter;?>"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a>
+        <a class="cc-youtube btn btn-link" href="<?php echo $youtube;?>"><i class="fa fa-youtube-square" aria-hidden="true"></i></i></a>
+        <a class="cc-instagram btn btn-link" href="<?php echo $instagram;?>"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
       <div class="h4 title text-center">Buque Museo USS Missouri</div>
       
     </footer>
